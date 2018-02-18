@@ -3,9 +3,10 @@
 extern crate primal;
 
 #[no_mangle]
-pub fn nth_prime(n: isize) -> usize {
-    if n <= 0 { return 0; }
-    primal::StreamingSieve::nth_prime(n as usize)
+pub fn nth_prime(n: i64) -> i64 {
+    if n <= 0 { return -1; }
+    let result = primal::StreamingSieve::nth_prime(n as usize);
+    result as i64
 }
 
 #[cfg(test)]
@@ -14,12 +15,12 @@ mod tests {
 
     #[test]
     fn zero_prime_index_is_invalid() {
-        assert_eq!(nth_prime(0), 0);
+        assert_eq!(nth_prime(0), -1);
     }
 
     #[test]
     fn negative_prime_index_is_invalid() {
-        assert_eq!(nth_prime(-1), 0);
+        assert_eq!(nth_prime(-1), -1);
     }
 
     #[test]
