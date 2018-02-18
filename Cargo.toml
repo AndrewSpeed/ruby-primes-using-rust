@@ -1,0 +1,7 @@
+[package]
+name = "ruby-primes-with-rust"
+version = "0.1.0"
+authors = ["Andrew Speed <andrew.cspeed@gmail.com>"]
+
+[dependencies]
+primal = "0.2.3"
