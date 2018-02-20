@@ -6,6 +6,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 gemspec
 
 group :development, :test do
+  gem 'bundler', '~> 1.16', '>= 1.16.1'
   gem "rspec", "~> 3.0"
   gem 'rubocop', require: false
 end

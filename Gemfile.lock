@@ -42,6 +42,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (~> 1.16, >= 1.16.1)
   rspec (~> 3.0)
   rubocop
   ruby-primes-using-rust!

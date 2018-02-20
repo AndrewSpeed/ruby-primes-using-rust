@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+%x( cargo build --release )
+%x( sudo cp ./target/debug/libruby_primes_with_rust.so /usr/lib )
+%x( ldconfig -n -v /usr/lib )
+
 require "bundler/setup"
 require "ruby_primes"
 

@@ -3,7 +3,7 @@ require 'ffi'
 module RustPrimes
   extend FFI::Library
 
-  ffi_lib 'ruby-primes-with-rust'
+  ffi_lib 'libruby_primes_with_rust.so'
 
   attach_function(:nth_prime, :nth_prime, [:long_long], :long_long)
 end
